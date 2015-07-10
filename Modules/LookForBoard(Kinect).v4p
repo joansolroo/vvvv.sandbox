@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\vvvv\projects\vvvv.sandbox\Modules\LookForBoard(Kinect).v4p" scrollx="915" scrolly="240" systemname="LookForBoard (Kinect)" filename="C:\vvvv\projects\vvvv.sandbox\Modules\LookForBoard(Kinect).v4p">
+   <PATCH nodename="C:\vvvv\projects\vvvv.sandbox\modules\LookForBoard(Kinect).v4p" scrollx="915" scrolly="240" systemname="LookForBoard (Kinect)" filename="C:\vvvv\projects\vvvv.sandbox\Modules\LookForBoard(Kinect).v4p">
    <BOUNDS type="Window" left="7065" top="1395" width="8985" height="14010">
    </BOUNDS>
    <PACK Name="VVVV.Packs" Version="0.2.0">
@@ -343,7 +343,7 @@
    </PIN>
    <PIN pinname="X" visible="1">
    </PIN>
-   <BOUNDS type="Window" left="750" top="1200" width="5490" height="10500">
+   <BOUNDS type="Window" left="750" top="1200" width="13035" height="10500">
    </BOUNDS>
    <PIN pinname="Texture" visible="1" slicecount="1" values="||">
    </PIN>

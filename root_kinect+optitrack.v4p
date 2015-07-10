@@ -1,12 +1,12 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\vvvv\projects\vvvv.sandbox\root_kinect+optitrack.v4p" systemname="root_kinect+optitrack" filename="C:\vvvv\projects\vvvv.sandbox\root_kinect+optitrack.v4p" scrollx="0" scrolly="-360">
-   <BOUNDS type="Window" left="7455" top="6390" width="11595" height="10170">
+   <PATCH nodename="C:\vvvv\projects\vvvv.sandbox\root_kinect+optitrack.v4p" systemname="root_kinect+optitrack" filename="C:\vvvv\projects\vvvv.sandbox\root_kinect+optitrack.v4p" scrollx="60" scrolly="0">
+   <BOUNDS type="Window" left="7215" top="5655" width="11595" height="10170">
    </BOUNDS>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
-   <NODE systemname="CalibrationKinectOptitrack" filename="CalibrationKinectOptitrack.v4p" nodename="CalibrationKinectOptitrack.v4p" componentmode="InAWindow" id="1">
+   <NODE systemname="CalibrationKinectOptitrack" filename="CalibrationKinectOptitrack.v4p" nodename="CalibrationKinectOptitrack.v4p" componentmode="InAWindow" id="1" stayontop="0">
    <BOUNDS type="Node" left="3075" top="2955" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Window" left="1470" top="855" width="19140" height="12645">
@@ -19,7 +19,7 @@
    </PIN>
    <PIN pinname="Got board" visible="1">
    </PIN>
-   <PIN pinname="Error" visible="1">
+   <PIN pinname="Error" visible="1" slicecount="1" values="0.329169672451098">
    </PIN>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
@@ -169,7 +169,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="3735" top="2115" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.2">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="m">
    </PIN>
@@ -309,7 +309,7 @@
    </LINKPOINT>
    </LINK>
    <NODE systemname="SaveViewProjection (Transform)" filename="..\vvvv.nodes\modules\IO\SaveViewProjection (Transform).v4p" nodename="SaveViewProjection (Transform)" componentmode="Hidden" id="15">
-   <BOUNDS type="Node" left="3705" top="7440" width="100" height="100">
+   <BOUNDS type="Node" left="3705" top="7485" width="100" height="100">
    </BOUNDS>
    <PIN pinname="View" visible="1">
    </PIN>
@@ -393,9 +393,9 @@
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="17" srcpinname="Output String" dstnodeid="15" dstpinname="Filename" linkstyle="VHV">
-   <LINKPOINT x="6270" y="7283">
+   <LINKPOINT x="6270" y="7298">
    </LINKPOINT>
-   <LINKPOINT x="5310" y="7283">
+   <LINKPOINT x="5310" y="7313">
    </LINKPOINT>
    </LINK>
    </PATCH>

@@ -1,5 +1,11 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
    <PATCH nodename="C:\vvvv\projects\vvvv.sandbox\Modules\LookForBoard(Kinect).v4p" scrollx="915" scrolly="240" systemname="LookForBoard (Kinect)" filename="C:\vvvv\projects\vvvv.sandbox\Modules\LookForBoard(Kinect).v4p">
+   <BOUNDS type="Window" left="7065" top="1395" width="8985" height="14010">
+   </BOUNDS>
+   <PACK Name="VVVV.Packs" Version="0.2.0">
+   </PACK>
+   <PACK Name="addonpack" Version="33.7.0">
+   </PACK>
    <NODE systemname="FindBoard (CV.Image)" filename="%VVVV%\packs\VVVV.Packs.Image\nodes\plugins\VVVV.CV.Nodes.dll" nodename="FindBoard (CV.Image)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="3255" top="2700" width="100" height="100">
    </BOUNDS>
@@ -153,7 +159,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Select (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Select (Value)" componentmode="Hidden" id="11">
-   <BOUNDS type="Node" left="3480" top="11760" width="100" height="100">
+   <BOUNDS type="Node" left="3270" top="11760" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1" slicecount="162" values="-INF,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-0.520870864391327,-0.0784301161766052,2.89076280593872,-0.754388034343719,-0.0368277356028557,3.08780980110168,-0.459839940071106,0.00655123498290777,1.40180587768555,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-0.304204076528549,-0.0900041460990906,1.47506380081177,-0.709743797779083,-0.12663209438324,2.79808044433594,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-0.266655385494232,-0.21438330411911,1.90097439289093,-0.312270402908325,-0.142055600881577,1.46865355968475,-0.413489252328873,-0.116473741829395,1.48076510429382,-INF,-INF,-INF,-1.16111254692078,-0.141568511724472,2.98100090026855,-1.57611095905304,-0.113507933914661,3.50103521347046,-INF,-INF,-INF,-2.7109317779541,-0.000941973004955798,4.80325841903687,-INF,-INF,-INF,-0.261725038290024,-0.258793294429779,1.7382618188858,-0.331404477357864,-0.193759828805923,1.47448444366455,-0.427468240261078,-0.170335486531258,1.48588633537292,-INF,-INF,-INF,-1.15312504768372,-0.228844791650772,2.87536787986755,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-0.26716673374176,-0.309038460254669,1.64934885501862,-0.34386357665062,-0.250709474086761,1.48429107666016,-0.447138100862503,-0.224241867661476,1.49702715873718,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-INF,-INF">
    </PIN>
@@ -457,12 +463,16 @@
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Corner Position XYZ|">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Corner XYZ|">
    </PIN>
    <PIN pinname="Rows" slicecount="1" values="3">
    </PIN>
    </NODE>
-   <LINK srcnodeid="25" srcpinname="Y Output Value" dstnodeid="32" dstpinname="Y Input Value">
+   <LINK srcnodeid="25" srcpinname="Y Output Value" dstnodeid="32" dstpinname="Y Input Value" linkstyle="Bezier">
+   <LINKPOINT x="4050" y="10620">
+   </LINKPOINT>
+   <LINKPOINT x="1665" y="10620">
+   </LINKPOINT>
    </LINK>
    <LINK srcnodeid="23" srcpinname="Color" dstnodeid="20" dstpinname="Color Input" linkstyle="Bezier">
    <LINKPOINT x="3105" y="8708">
@@ -554,16 +564,24 @@
    </NODE>
    <LINK srcnodeid="34" srcpinname="Y Output Value" dstnodeid="15" dstpinname="XY">
    </LINK>
-   <LINK srcnodeid="25" srcpinname="Y Output Value" dstnodeid="11" dstpinname="Input">
+   <LINK srcnodeid="25" srcpinname="Y Output Value" dstnodeid="11" dstpinname="Input" linkstyle="Bezier">
+   <LINKPOINT x="4050" y="11070">
+   </LINKPOINT>
+   <LINKPOINT x="3315" y="11070">
+   </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="27" srcpinname="Output" dstnodeid="11" dstpinname="Select">
+   <LINK srcnodeid="27" srcpinname="Output" dstnodeid="11" dstpinname="Select" linkstyle="VHV">
+   <LINKPOINT x="4470" y="11670">
+   </LINKPOINT>
+   <LINKPOINT x="3810" y="11670">
+   </LINKPOINT>
    </LINK>
    <NODE id="35" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
-   <PIN pinname="Descriptive Name" slicecount="1" values="Output">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Valid Corners XYZ|">
    </PIN>
-   <BOUNDS type="Box" left="3465" top="12605" width="750" height="240">
+   <BOUNDS type="Box" left="3255" top="12605" width="750" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="3465" top="12605" width="750" height="240">
+   <BOUNDS type="Node" left="3255" top="12605" width="750" height="240">
    </BOUNDS>
    </NODE>
    <LINK srcnodeid="11" srcpinname="Output" dstnodeid="35" dstpinname="Y Input Value">
@@ -600,9 +618,17 @@
    </LINK>
    <LINK srcnodeid="26" srcpinname="Output" dstnodeid="27" dstpinname="Input 3">
    </LINK>
-   <LINK srcnodeid="25" srcpinname="Y Output Value" dstnodeid="24" dstpinname="Input 1">
+   <LINK srcnodeid="25" srcpinname="Y Output Value" dstnodeid="24" dstpinname="Input 1" linkstyle="Bezier">
+   <LINKPOINT x="4110" y="10613">
+   </LINKPOINT>
+   <LINKPOINT x="4560" y="10613">
+   </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="25" srcpinname="Y Output Value" dstnodeid="26" dstpinname="Input 1">
+   <LINK srcnodeid="25" srcpinname="Y Output Value" dstnodeid="26" dstpinname="Input 1" linkstyle="Bezier">
+   <LINKPOINT x="4110" y="10605">
+   </LINKPOINT>
+   <LINKPOINT x="4920" y="10605">
+   </LINKPOINT>
    </LINK>
    <LINK srcnodeid="31" srcpinname="Output Node" dstnodeid="7" dstpinname="Texture In">
    </LINK>
@@ -610,10 +636,4 @@
    </LINK>
    <LINK srcnodeid="7" srcpinname="Height" dstnodeid="8" dstpinname="Y">
    </LINK>
-   <BOUNDS type="Window" left="7065" top="1395" width="8985" height="14010">
-   </BOUNDS>
-   <PACK Name="VVVV.Packs" Version="0.2.0">
-   </PACK>
-   <PACK Name="addonpack" Version="33.7.0">
-   </PACK>
    </PATCH>
