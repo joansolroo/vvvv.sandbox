@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\inria\vvvv\projects\sandbox\Subpatches\MirrorTexture (Dx11).v4p" systemname="MirrorTexture (Dx11)" filename="C:\inria\vvvv\projects\sandbox\Subpatches\MirrorTexture (Dx11).v4p" scrollx="96" scrolly="0">
-   <BOUNDS type="Window" left="10020" top="1968" width="16452" height="10548">
+   <PATCH nodename="C:\vvvv\projects\vvvv.sandbox\Subpatches\MirrorTexture (Dx11).v4p" systemname="MirrorTexture (Dx11)" filename="C:\inria\vvvv\projects\sandbox\Subpatches\MirrorTexture (Dx11).v4p" scrollx="96" scrolly="0">
+   <BOUNDS type="Window" left="5532" top="552" width="16452" height="10548">
    </BOUNDS>
    <PACK Name="image" Version="0.2.0">
    </PACK>
@@ -153,7 +153,7 @@
    </PIN>
    <PIN pinname="Enable Depth Buffer" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Target Format" slicecount="1" values="R32G32B32A32_Float" visible="1">
+   <PIN pinname="Target Format" slicecount="1" visible="1" values="R32G32B32A32_Float">
    </PIN>
    <PIN pinname="ViewPort" visible="1" slicecount="1" values="||">
    </PIN>
@@ -256,6 +256,8 @@
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Mirror X value|">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="28" srcpinname="Y Output Value" dstnodeid="25" dstpinname="Switch">

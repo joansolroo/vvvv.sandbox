@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
    <PATCH nodename="C:\inria\vvvv\projects\sandbox\Subpatches\MirrorTexture (Dx11).v4p" systemname="MirrorTexture (Dx11)" filename="C:\inria\vvvv\projects\sandbox\Subpatches\MirrorTexture (Dx11).v4p" scrollx="96" scrolly="0">
-   <BOUNDS type="Window" left="5532" top="552" width="16452" height="10548">
+   <BOUNDS type="Window" left="10020" top="1968" width="16452" height="10548">
    </BOUNDS>
    <PACK Name="image" Version="0.2.0">
    </PACK>

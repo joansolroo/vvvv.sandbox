@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\inria\vvvv\projects\sandbox\Modules\TextureWriter (SharedTexture).v4p" systemname="TextureWriter (SharedTexture)" filename="C:\inria\vvvv\projects\sandbox\Modules\TextureWriter (SharedTexture).v4p">
-   <BOUNDS type="Window" left="4152" top="1176" width="7284" height="10608">
+   <PATCH nodename="C:\vvvv\projects\vvvv.sandbox\Modules\TextureWriter (SharedTexture).v4p" systemname="TextureWriter (SharedTexture)" filename="C:\inria\vvvv\projects\sandbox\Modules\TextureWriter (SharedTexture).v4p">
+   <BOUNDS type="Window" left="4140" top="1170" width="13680" height="10605">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
@@ -47,6 +47,8 @@
    </PIN>
    <PIN pinname="Texture SizeXY" visible="1">
    </PIN>
+   <PIN pinname="Enabled" slicecount="1" visible="1" values="1">
+   </PIN>
    </NODE>
    <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="3" systemname="IOBox (Enumerations)">
    <BOUNDS type="Box" left="1662" top="3654" width="2136" height="252">
@@ -66,6 +68,8 @@
    <PIN pinname="Shared Memory Name" visible="1">
    </PIN>
    <PIN pinname="Success" visible="1">
+   </PIN>
+   <PIN pinname="Write" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="AsRaw (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="AsRaw (Value)" componentmode="Hidden" id="5">
@@ -129,6 +133,8 @@
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="10" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="5505" top="3255" width="795" height="240">
@@ -142,6 +148,8 @@
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
    </PIN>
    </NODE>
    <NODE systemname="Vector (3d Join)" nodename="Vector (3d Join)" componentmode="Hidden" id="11">
@@ -162,6 +170,8 @@
    <PIN pinname="Texture" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="Info (DX11.Texture 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Info (DX11.Texture 2d)" componentmode="Hidden" id="13">
@@ -240,7 +250,11 @@
    <LINKPOINT x="4263" y="1990">
    </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="13" srcpinname="Width" dstnodeid="9" dstpinname="Y Input Value">
+   <LINK srcnodeid="13" srcpinname="Width" dstnodeid="9" dstpinname="Y Input Value" linkstyle="Bezier">
+   <LINKPOINT x="4305" y="2880">
+   </LINKPOINT>
+   <LINKPOINT x="4665" y="2880">
+   </LINKPOINT>
    </LINK>
    <LINK srcnodeid="4" srcpinname="Success" dstnodeid="15" dstpinname="Y Input Value">
    </LINK>
@@ -280,6 +294,48 @@
    <LINKPOINT x="5415" y="3746">
    </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="13" srcpinname="Height" dstnodeid="10" dstpinname="Y Input Value">
+   <LINK srcnodeid="13" srcpinname="Height" dstnodeid="10" dstpinname="Y Input Value" linkstyle="Bezier">
+   <LINKPOINT x="4485" y="2858">
+   </LINKPOINT>
+   <LINKPOINT x="5490" y="2858">
+   </LINKPOINT>
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="17" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="3840" top="465" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3840" top="465" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Enabled">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="17" srcpinname="Y Output Value" dstnodeid="12" dstpinname="Enabled" linkstyle="Bezier" hiddenwhenlocked="1">
+   <LINKPOINT x="3855" y="1913">
+   </LINKPOINT>
+   <LINKPOINT x="3405" y="1913">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="17" srcpinname="Y Output Value" dstnodeid="2" dstpinname="Enabled" linkstyle="Bezier" hiddenwhenlocked="1">
+   <LINKPOINT x="3855" y="2753">
+   </LINKPOINT>
+   <LINKPOINT x="3090" y="2753">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="17" srcpinname="Y Output Value" dstnodeid="4" dstpinname="Write" linkstyle="Bezier" hiddenwhenlocked="1">
+   <LINKPOINT x="3870" y="4763">
+   </LINKPOINT>
+   <LINKPOINT x="5475" y="4763">
+   </LINKPOINT>
    </LINK>
    </PATCH>

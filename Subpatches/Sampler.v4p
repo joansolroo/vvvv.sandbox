@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\inria\vvvv\projects\sandbox\Subpatches\Sampler.v4p" systemname="Sampler" filename="C:\inria\vvvv\projects\sandbox\Subpatches\Sampler.v4p" scrollx="0" scrolly="0">
+   <PATCH nodename="C:\vvvv\projects\vvvv.sandbox\Subpatches\Sampler.v4p" systemname="Sampler" filename="C:\inria\vvvv\projects\sandbox\Subpatches\Sampler.v4p" scrollx="0" scrolly="-360">
    <NODE id="0" nodename="IOBox (Value Advanced)" componentmode="InABox" systemname="IOBox (Value Advanced)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Timer">
    </PIN>
@@ -93,6 +93,8 @@
    </PIN>
    <PIN pinname="Board detected" slicecount="1" visible="1" values="0">
    </PIN>
+   <PIN pinname="Wait time" slicecount="1" values="30" visible="1">
+   </PIN>
    </NODE>
    <NODE id="5" systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden">
    <BOUNDS type="Node" left="4368" top="5040" width="100" height="100">
@@ -118,7 +120,7 @@
    <PIN pinname="Input 3" visible="1">
    </PIN>
    </NODE>
-   <NODE id="7" componentmode="Hidden" systemname="Changed" filename="Changed.v4p" nodename="Subpatches\Changed.v4p">
+   <NODE id="7" componentmode="InAWindow" systemname="Changed" filename="Changed.v4p" nodename="Subpatches\Changed.v4p">
    <BOUNDS type="Node" left="5276" top="3636" width="0" height="0">
    </BOUNDS>
    <BOUNDS type="Box" left="2870" top="526" width="4812" height="6220">
@@ -130,6 +132,8 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    <PIN pinname="Set" visible="1">
+   </PIN>
+   <PIN pinname="Threshold " slicecount="1" values="0">
    </PIN>
    </NODE>
    <NODE id="8" nodename="IOBox (Value Advanced)" componentmode="InABox" systemname="IOBox (Value Advanced)">
@@ -292,8 +296,6 @@
    </LINK>
    <LINK srcnodeid="10" srcpinname="Y Output Value" dstnodeid="4" dstpinname="Start sampling">
    </LINK>
-   <LINK srcnodeid="4" srcpinname="Up Edge" dstnodeid="6" dstpinname="Input 1" linkstyle="PolyLine">
-   </LINK>
    <LINK srcnodeid="7" srcpinname="Output" dstnodeid="6" dstpinname="Input 2">
    </LINK>
    <LINK srcnodeid="4" srcpinname="Output" dstnodeid="7" dstpinname="Set">
@@ -316,7 +318,7 @@
    <LINKPOINT x="6720" y="4352">
    </LINKPOINT>
    </LINK>
-   <BOUNDS type="Window" left="11424" top="1944" width="9576" height="9240">
+   <BOUNDS type="Window" left="12396" top="2856" width="9576" height="9240">
    </BOUNDS>
    <PACK Name="image" Version="0.2.0">
    </PACK>
@@ -338,6 +340,8 @@
    <PIN pinname="Behavior" slicecount="1" values="Bang">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Board detected|">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="15" srcpinname="Y Output Value" dstnodeid="4" dstpinname="Board detected">
@@ -373,5 +377,43 @@
    <LINK srcnodeid="16" srcpinname="Output" dstnodeid="17" dstpinname="Y Input Value">
    </LINK>
    <LINK srcnodeid="11" srcpinname="Y Output Value" dstnodeid="16" dstpinname="Reset">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="18" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="7065" top="3720" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7065" top="3720" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="4" srcpinname="Up Edge" dstnodeid="18" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="15" srcpinname="Y Output Value" dstnodeid="6" dstpinname="Input 1">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="19" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="5715" top="1905" width="615" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5715" top="1905" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="2">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Wait time|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="19" srcpinname="Y Output Value" dstnodeid="4" dstpinname="Wait time">
    </LINK>
    </PATCH>

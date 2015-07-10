@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\inria\vvvv\projects\sandbox\Subpatches\Changed.v4p" systemname="Changed" filename="C:\inria\vvvv\projects\sandbox\Subpatches\Changed.v4p" scrollx="0" scrolly="0">
+   <PATCH nodename="C:\vvvv\projects\vvvv.sandbox\Subpatches\Changed.v4p" systemname="Changed" filename="C:\inria\vvvv\projects\sandbox\Subpatches\Changed.v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="8028" top="4308" width="4812" height="6216">
    </BOUNDS>
    <PACK Name="image" Version="0.2.0">
@@ -65,7 +65,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="3312" top="2844" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>

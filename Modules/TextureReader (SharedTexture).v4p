@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\inria\vvvv\projects\sandbox\Modules\TextureReader (SharedTexture).v4p" systemname="TextureReader (SharedTexture)" filename="C:\inria\vvvv\projects\sandbox\Modules\TextureReader (SharedTexture).v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="564" top="636" width="13212" height="10464">
+   <PATCH nodename="C:\vvvv\projects\vvvv.sandbox\modules\TextureReader (SharedTexture).v4p" systemname="TextureReader (SharedTexture)" filename="C:\inria\vvvv\projects\sandbox\Modules\TextureReader (SharedTexture).v4p" scrollx="30" scrolly="-720">
+   <BOUNDS type="Window" left="4080" top="2790" width="13200" height="10455">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
@@ -64,12 +64,12 @@
    </NODE>
    <LINK srcnodeid="32" srcpinname="Output String" dstnodeid="3" dstpinname="Shared Memory Name">
    </LINK>
-   <NODE systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="InABox" id="39">
+   <NODE systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="InAWindow" id="39">
    <BOUNDS type="Node" left="6564" top="5976" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="6564" top="5976" width="4800" height="3600">
    </BOUNDS>
-   <BOUNDS type="Window" left="13032" top="8892" width="5016" height="4164">
+   <BOUNDS type="Window" left="0" top="6990" width="14190" height="10410">
    </BOUNDS>
    <PIN pinname="Texture In" visible="1" slicecount="1" values="||">
    </PIN>
@@ -93,9 +93,9 @@
    </PIN>
    <PIN pinname="Output Node" visible="1">
    </PIN>
+   <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="42" srcpinname="Texture" dstnodeid="41" dstpinname="Input Node">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="40" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="8019" top="4635" width="480" height="480">
    </BOUNDS>
@@ -115,8 +115,6 @@
    <LINK srcnodeid="42" srcpinname="Is Valid" dstnodeid="40" dstpinname="Y Input Value">
    </LINK>
    <LINK srcnodeid="0" srcpinname="Output" dstnodeid="42" dstpinname="Pointer">
-   </LINK>
-   <LINK srcnodeid="41" srcpinname="Output Node" dstnodeid="39" dstpinname="Texture In">
    </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="43" systemname="IOBox (Node)">
    <BOUNDS type="Box" left="5244" top="7392" width="792" height="240">
@@ -157,13 +155,15 @@
    </PIN>
    </NODE>
    <NODE id="17" nodename="IOBox (Node)" componentmode="InABox" systemname="IOBox (Node)">
-   <PIN pinname="Input Node" slicecount="1" values="||">
+   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
    </PIN>
-   <BOUNDS type="Box" left="4821" top="5724" width="795" height="240">
+   <BOUNDS type="Box" left="1551" top="7824" width="2865" height="270">
    </BOUNDS>
-   <BOUNDS type="Node" left="4821" top="5724" width="0" height="0">
+   <BOUNDS type="Node" left="1551" top="7824" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Texture dx9|">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
    </PIN>
    </NODE>
    <NODE id="6" nodename="IOBox (Value Advanced)" componentmode="InABox" systemname="IOBox (Value Advanced)">
@@ -234,12 +234,12 @@
    <PIN pinname="Input Enum" slicecount="1" values="RenderTarget">
    </PIN>
    </NODE>
-   <NODE id="11" systemname="Renderer (EX9)" nodename="Renderer (EX9)" componentmode="InABox">
-   <BOUNDS type="Node" left="1830" top="5565" width="100" height="100">
+   <NODE id="11" systemname="Renderer (EX9)" nodename="Renderer (EX9)" componentmode="InAWindow">
+   <BOUNDS type="Node" left="1800" top="5610" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="1830" top="5565" width="2400" height="1800">
+   <BOUNDS type="Box" left="1800" top="5610" width="8430" height="7365">
    </BOUNDS>
-   <BOUNDS type="Window" left="13440" top="6690" width="6240" height="5085">
+   <BOUNDS type="Window" left="510" top="345" width="19575" height="16110">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
@@ -280,8 +280,6 @@
    </LINK>
    <LINK srcnodeid="20" srcpinname="Output" dstnodeid="5" dstpinname="Width">
    </LINK>
-   <LINK srcnodeid="5" srcpinname="Texture Out" dstnodeid="17" dstpinname="Input Node">
-   </LINK>
    <LINK srcnodeid="0" srcpinname="Output" dstnodeid="5" dstpinname="Handle">
    </LINK>
    <LINK srcnodeid="9" srcpinname="Output Enum" dstnodeid="5" dstpinname="Format">
@@ -291,5 +289,23 @@
    <LINK srcnodeid="2" srcpinname="Output" dstnodeid="24" dstpinname="Input">
    </LINK>
    <PACK Name="image" Version="0.2.0">
+   </PACK>
+   <LINK srcnodeid="42" srcpinname="Texture" dstnodeid="41" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="DX9Texture (EX9.Texture)" nodename="DX9Texture (EX9.Texture)" componentmode="Hidden" id="48">
+   <BOUNDS type="Node" left="1875" top="7020" width="2955" height="270">
+   </BOUNDS>
+   <PIN pinname="Source" visible="1">
+   </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="11" srcpinname="EX9 Out" dstnodeid="48" dstpinname="Source">
+   </LINK>
+   <LINK srcnodeid="42" srcpinname="Texture" dstnodeid="39" dstpinname="Texture In">
+   </LINK>
+   <LINK srcnodeid="48" srcpinname="Texture Out" dstnodeid="17" dstpinname="Input Node">
+   </LINK>
+   <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
    </PATCH>

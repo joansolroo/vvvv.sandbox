@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\inria\vvvv\projects\sandbox\Modules\KinectSender (SharedTexture).v4p" systemname="KinectSender (SharedTexture)" filename="C:\inria\vvvv\projects\sandbox\Modules\KinectSender (SharedTexture).v4p" scrollx="312" scrolly="0">
-   <BOUNDS type="Window" left="11328" top="3168" width="9000" height="6000">
+   <PATCH nodename="C:\vvvv\projects\vvvv.sandbox\Modules\KinectSender (SharedTexture).v4p" systemname="KinectSender (SharedTexture)" filename="C:\inria\vvvv\projects\sandbox\Modules\KinectSender (SharedTexture).v4p" scrollx="240" scrolly="120">
+   <BOUNDS type="Window" left="11325" top="3165" width="10725" height="8670">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
@@ -13,7 +13,7 @@
    </PIN>
    </NODE>
    <NODE systemname="TextureWriter (SharedTexture)" filename="TextureWriter (SharedTexture).v4p" nodename="TextureWriter (SharedTexture).v4p" componentmode="Hidden" id="7">
-   <BOUNDS type="Node" left="2028" top="1944" width="1296" height="276">
+   <BOUNDS type="Node" left="2043" top="2379" width="1296" height="276">
    </BOUNDS>
    <PIN pinname="Texture" visible="1" slicecount="1" values="||">
    </PIN>
@@ -23,7 +23,7 @@
    </PIN>
    <BOUNDS type="Window" left="4152" top="1176" width="7284" height="10608">
    </BOUNDS>
-   <PIN pinname="Shared Memory Name" slicecount="1" values="KinectRGB">
+   <PIN pinname="Shared Memory Name" slicecount="1" values="KinectRGB" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="11" srcpinname="Output Enum" dstnodeid="7" dstpinname="Target Format">
@@ -47,7 +47,7 @@
    </PIN>
    <BOUNDS type="Window" left="4152" top="1176" width="7284" height="10608">
    </BOUNDS>
-   <PIN pinname="Shared Memory Name" slicecount="1" values="KinectXYZ">
+   <PIN pinname="Shared Memory Name" slicecount="1" values="KinectXYZ" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="18" srcpinname="Output Enum" dstnodeid="17" dstpinname="Target Format">
@@ -116,32 +116,6 @@
    </NODE>
    <LINK dstnodeid="29" dstpinname="Receive" srcnodeid="26" srcpinname="Output Enum">
    </LINK>
-   <NODE systemname="LocalKinect (Microsoft dx11)" filename="LocalKinect (Microsoft dx11).v4p" nodename="LocalKinect (Microsoft dx11).v4p" componentmode="Hidden" id="30">
-   <BOUNDS type="Node" left="1140" top="600" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Window" left="6360" top="936" width="15648" height="11244">
-   </BOUNDS>
-   <PIN pinname="RGB" visible="1">
-   </PIN>
-   <PIN pinname="WorldXYZ" visible="1">
-   </PIN>
-   <PIN pinname="RGBDepth" visible="1">
-   </PIN>
-   <PIN pinname="Depth" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="30" srcpinname="RGB" dstnodeid="7" dstpinname="Texture" linkstyle="Bezier">
-   <LINKPOINT x="1740" y="1410">
-   </LINKPOINT>
-   <LINKPOINT x="2640" y="1410">
-   </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="30" srcpinname="WorldXYZ" dstnodeid="17" dstpinname="Texture" linkstyle="Bezier">
-   <LINKPOINT x="1980" y="2430">
-   </LINKPOINT>
-   <LINKPOINT x="3156" y="2430">
-   </LINKPOINT>
-   </LINK>
    <PACK Name="image" Version="0.2.0">
    </PACK>
    <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="32" systemname="IOBox (Enumerations)">
@@ -163,16 +137,10 @@
    </PIN>
    <BOUNDS type="Window" left="4152" top="1176" width="7284" height="10608">
    </BOUNDS>
-   <PIN pinname="Shared Memory Name" slicecount="1" values="KinectRGBDMap">
+   <PIN pinname="Shared Memory Name" slicecount="1" values="KinectRGBDMap" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="32" srcpinname="Output Enum" dstnodeid="31" dstpinname="Target Format">
-   </LINK>
-   <LINK srcnodeid="30" srcpinname="RGBDepth" dstnodeid="31" dstpinname="Texture" linkstyle="Bezier">
-   <LINKPOINT x="1416" y="2298">
-   </LINKPOINT>
-   <LINKPOINT x="1320" y="2298">
-   </LINKPOINT>
    </LINK>
    <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="34" systemname="IOBox (Enumerations)">
    <BOUNDS type="Box" left="360" top="1464" width="1596" height="276">
@@ -183,7 +151,7 @@
    </PIN>
    </NODE>
    <NODE systemname="TextureWriter (SharedTexture)" filename="TextureWriter (SharedTexture).v4p" nodename="TextureWriter (SharedTexture).v4p" componentmode="Hidden" id="33">
-   <BOUNDS type="Node" left="360" top="1980" width="100" height="100">
+   <BOUNDS type="Node" left="345" top="2415" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Texture" visible="1" slicecount="1" values="||">
    </PIN>
@@ -193,15 +161,115 @@
    </PIN>
    <BOUNDS type="Window" left="4152" top="1176" width="7284" height="10608">
    </BOUNDS>
-   <PIN pinname="Shared Memory Name" slicecount="1" values="KinectDepth">
+   <PIN pinname="Shared Memory Name" slicecount="1" values="KinectDepth" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="34" srcpinname="Output Enum" dstnodeid="33" dstpinname="Target Format">
    </LINK>
+   <NODE id="30" componentmode="InAWindow" systemname="Kinect2 (Microsoft dx11 nonmirrored)" filename="Kinect2 (Microsoft dx11 nonmirrored).v4p" nodename="Kinect2 (Microsoft dx11 nonmirrored)">
+   <BOUNDS type="Node" left="1140" top="600" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Window" left="15780" top="4440" width="15645" height="11235">
+   </BOUNDS>
+   <PIN pinname="RGB" visible="1">
+   </PIN>
+   <PIN pinname="WorldXYZ" visible="1">
+   </PIN>
+   <PIN pinname="RGBDepth" visible="1">
+   </PIN>
+   <PIN pinname="Depth" visible="1">
+   </PIN>
+   </NODE>
    <LINK srcnodeid="30" srcpinname="Depth" dstnodeid="33" dstpinname="Texture" linkstyle="Bezier">
-   <LINKPOINT x="1152" y="1428">
+   <LINKPOINT x="1147" y="1573">
    </LINKPOINT>
-   <LINKPOINT x="1008" y="1428">
+   <LINKPOINT x="998" y="1718">
    </LINKPOINT>
    </LINK>
+   <LINK srcnodeid="30" srcpinname="WorldXYZ" dstnodeid="17" dstpinname="Texture" linkstyle="Bezier">
+   <LINKPOINT x="1980" y="2430">
+   </LINKPOINT>
+   <LINKPOINT x="3156" y="2430">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="30" srcpinname="RGB" dstnodeid="7" dstpinname="Texture" linkstyle="Bezier">
+   <LINKPOINT x="1745" y="1555">
+   </LINKPOINT>
+   <LINKPOINT x="2650" y="1700">
+   </LINKPOINT>
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="35" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="450" top="2040" width="1110" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="450" top="2040" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="KinectDepth">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="#vvvv">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="35" srcpinname="Output String" dstnodeid="33" dstpinname="Shared Memory Name">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="36" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="2250" top="1995" width="1335" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2250" top="1995" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="KinectRGB">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="#vvvv">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="36" srcpinname="Output String" dstnodeid="7" dstpinname="Shared Memory Name">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="37" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="690" top="2835" width="1410" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="690" top="2835" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="KinectRGBDMap">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="#vvvv">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="37" srcpinname="Output String" dstnodeid="31" dstpinname="Shared Memory Name">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="38" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="3540" top="2940" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3540" top="2940" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="KinectXYZ">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="#vvvv">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="38" srcpinname="Output String" dstnodeid="17" dstpinname="Shared Memory Name">
+   <LINKPOINT x="3630" y="4020">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="InAWindow" id="39">
+   <BOUNDS type="Node" left="705" top="7350" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="705" top="7350" width="6000" height="4500">
+   </BOUNDS>
+   <BOUNDS type="Window" left="12840" top="11370" width="6240" height="5085">
+   </BOUNDS>
+   </NODE>
    </PATCH>
