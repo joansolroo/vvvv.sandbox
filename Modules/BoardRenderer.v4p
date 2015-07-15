@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
    <PATCH nodename="C:\vvvv\projects\vvvv.sandbox\modules\BoardRenderer.v4p" systemname="BoardRenderer" filename="C:\vvvv\projects\vvvv.sandbox\Modules\BoardRenderer.v4p" scrollx="0" scrolly="1080">
-   <BOUNDS type="Window" left="4500" top="9855" width="6555" height="8385">
+   <BOUNDS type="Window" left="3915" top="5895" width="6555" height="8385">
    </BOUNDS>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
@@ -18,12 +18,12 @@
    <PIN pinname="Board Pitch" slicecount="1" visible="1" values="0.17">
    </PIN>
    </NODE>
-   <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" id="1">
+   <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="FullScreen" id="1" stayontop="1">
    <BOUNDS type="Node" left="3375" top="3165" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="3375" top="3165" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="41145" top="4080" width="6240" height="5085">
+   <BOUNDS type="Window" left="-41565" top="6975" width="6240" height="5085">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
@@ -365,5 +365,29 @@
    </LINKPOINT>
    <LINKPOINT x="4230" y="2730">
    </LINKPOINT>
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="18" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="840" top="4035" width="795" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="840" top="4035" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="px">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="0,0">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Projected Resolution|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Actual BackBuffer SizeXY" dstnodeid="18" dstpinname="Y Input Value">
    </LINK>
    </PATCH>

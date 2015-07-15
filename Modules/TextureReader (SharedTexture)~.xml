@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
    <PATCH nodename="C:\vvvv\projects\vvvv.sandbox\modules\TextureReader (SharedTexture).v4p" systemname="TextureReader (SharedTexture)" filename="C:\inria\vvvv\projects\sandbox\Modules\TextureReader (SharedTexture).v4p" scrollx="30" scrolly="-720">
-   <BOUNDS type="Window" left="10905" top="5760" width="13200" height="10455">
+   <BOUNDS type="Window" left="4080" top="2790" width="13200" height="10455">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
@@ -239,7 +239,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="1800" top="5610" width="8430" height="7365">
    </BOUNDS>
-   <BOUNDS type="Window" left="-1485" top="6210" width="14130" height="11025">
+   <BOUNDS type="Window" left="510" top="345" width="19575" height="16110">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>

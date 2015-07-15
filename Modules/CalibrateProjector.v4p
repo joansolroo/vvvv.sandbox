@@ -6,7 +6,7 @@
    </PACK>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
-   <NODE systemname="CalibrateProjector (CV.Transform)" filename="%VVVV%\packs\VVVV.Packs.Image\nodes\modules\Image\OpenCV\CalibrateProjector (CV.Transform).v4p" nodename="CalibrateProjector (CV.Transform)" componentmode="Hidden" id="0">
+   <NODE systemname="CalibrateProjector (CV.Transform)" filename="%VVVV%\packs\VVVV.Packs.Image\nodes\modules\Image\OpenCV\CalibrateProjector (CV.Transform).v4p" nodename="CalibrateProjector (CV.Transform)" componentmode="InAWindow" id="0">
    <BOUNDS type="Node" left="3285" top="7290" width="1500" height="270">
    </BOUNDS>
    <PIN pinname="Projection XY" visible="1" slicecount="162" values="-0.16,0.1,0,-0.12,0.1,0,-0.08,0.1,0,-0.04,0.1,0,0,0.1,0,0.04,0.1,0,0.08,0.1,0,0.12,0.1,0,0.16,0.1,0,-0.16,0.06,0,-0.12,0.06,0,-0.08,0.06,0,-0.04,0.06,0,0,0.06,0,0.04,0.06,0,0.08,0.06,0,0.12,0.06,0,0.16,0.06,0,-0.16,0.02,0,-0.12,0.02,0,-0.08,0.02,0,-0.04,0.02,0,0,0.02,0,0.04,0.02,0,0.08,0.02,0,0.12,0.02,0,0.16,0.02,0,-0.16,-0.02,0,-0.12,-0.02,0,-0.08,-0.02,0,-0.04,-0.02,0,0,-0.02,0,0.04,-0.02,0,0.08,-0.02,0,0.12,-0.02,0,0.16,-0.02,0,-0.16,-0.06,0,-0.12,-0.06,0,-0.08,-0.06,0,-0.04,-0.06,0,0,-0.06,0,0.04,-0.06,0,0.08,-0.06,0,0.12,-0.06,0,0.16,-0.06,0,-0.16,-0.1,0,-0.12,-0.1,0,-0.08,-0.1,0,-0.04,-0.1,0,0,-0.1,0,0.04,-0.1,0,0.08,-0.1,0,0.12,-0.1,0,0.16,-0.1,0">
@@ -26,6 +26,8 @@
    <PIN pinname="Status" visible="1">
    </PIN>
    <PIN pinname="Near" slicecount="1" values="0.1">
+   </PIN>
+   <PIN pinname="Resolution" visible="1">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="1" systemname="IOBox (Value Advanced)">
@@ -465,5 +467,25 @@
    </LINKPOINT>
    <LINKPOINT x="3015" y="2663">
    </LINKPOINT>
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="47" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="3690" top="5790" width="795" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3690" top="5790" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="1024,768">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Resolution">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="47" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Resolution">
    </LINK>
    </PATCH>

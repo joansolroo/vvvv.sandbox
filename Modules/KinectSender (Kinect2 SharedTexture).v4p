@@ -113,7 +113,7 @@
    <NODE id="30" componentmode="Hidden" systemname="Kinect2 (Microsoft dx11 nonmirrored)" filename="Kinect2 (Microsoft dx11 nonmirrored).v4p" nodename="Kinect2 (Microsoft dx11 nonmirrored)">
    <BOUNDS type="Node" left="1200" top="1515" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Window" left="3975" top="3420" width="28245" height="13695">
+   <BOUNDS type="Window" left="0" top="2055" width="28245" height="13695">
    </BOUNDS>
    <PIN pinname="RGB" visible="1">
    </PIN>
@@ -798,4 +798,14 @@
    <LINKPOINT x="8865" y="4253">
    </LINKPOINT>
    </LINK>
+   <NODE systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="InAWindow" id="84">
+   <BOUNDS type="Node" left="555" top="7980" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="555" top="7980" width="6000" height="4500">
+   </BOUNDS>
+   <BOUNDS type="Window" left="3900" top="9585" width="6240" height="5085">
+   </BOUNDS>
+   <PIN pinname="Texture In" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
    </PATCH>

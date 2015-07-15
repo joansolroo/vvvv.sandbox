@@ -596,7 +596,7 @@
    </NODE>
    <LINK srcnodeid="57" srcpinname="Texture Out" dstnodeid="98" dstpinname="Input Node">
    </LINK>
-   <NODE systemname="Mirror (Microsoft dx11)" filename="Mirror (Microsoft dx11).v4p" nodename="Mirror (Microsoft dx11).v4p" componentmode="InAWindow" id="212">
+   <NODE systemname="Mirror (Microsoft dx11)" filename="Mirror (Microsoft dx11).v4p" nodename="Mirror (Microsoft dx11).v4p" componentmode="Hidden" id="212">
    <BOUNDS type="Node" left="3994" top="11212" width="0" height="0">
    </BOUNDS>
    <BOUNDS type="Box" left="0" top="4902" width="10284" height="12621">

@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\vvvv\projects\vvvv.sandbox\Modules\Kinect2 (Microsoft dx11 nonmirrored).v4p" systemname="Kinect2 (Microsoft dx11 nonmirrored)" filename="C:\vvvv\projects\vvvv.sandbox\Modules\Kinect2 (Microsoft dx11 nonmirrored).v4p" scrollx="0" scrolly="360">
+   <PATCH nodename="C:\vvvv\projects\vvvv.sandbox\Modules\Kinect2 (Microsoft dx11 nonmirrored).v4p" systemname="Kinect2 (Microsoft dx11 nonmirrored)" filename="C:\vvvv\projects\vvvv.sandbox\Modules\Kinect2 (Microsoft dx11 nonmirrored).v4p" scrollx="0" scrolly="1080">
    <NODE componentmode="InABox" id="1" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="100" left="7872" top="1620" type="Node" width="100">
    </BOUNDS>
@@ -202,7 +202,7 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="Mirror">
    </PIN>
    </NODE>
-   <BOUNDS type="Window" left="3975" top="3420" width="28245" height="13695">
+   <BOUNDS type="Window" left="0" top="2055" width="28245" height="13695">
    </BOUNDS>
    <PACK Name="image" Version="0.2.0">
    </PACK>
@@ -592,6 +592,8 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="DepthRGBUnflipped">
    </PIN>
    <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="57" srcpinname="Texture Out" dstnodeid="98" dstpinname="Input Node">

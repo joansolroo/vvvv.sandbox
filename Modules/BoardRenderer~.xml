@@ -18,7 +18,7 @@
    <PIN pinname="Board Pitch" slicecount="1" visible="1" values="0.17">
    </PIN>
    </NODE>
-   <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="FullScreen" id="1">
+   <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" id="1">
    <BOUNDS type="Node" left="3375" top="3165" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="3375" top="3165" width="6000" height="4500">
